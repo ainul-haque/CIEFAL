@@ -1,14 +1,17 @@
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+import { inject } from "@vercel/analytics";
 
 const app = express();
 const PORT = 8000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+inject();
+injectSpeedInsights();
 
 app.use(express.static(path.join(__dirname, "public")));
 
