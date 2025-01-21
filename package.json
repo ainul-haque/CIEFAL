@@ -1,0 +1,33 @@
+{
+  "name": "ciefal",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "The official webiste of CIEFAL - Cambridge Institute of English For Advanced Learning",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ainul-haque/CIEFAL.git"
+  },
+  "keywords": [
+    "ciefal",
+    "english",
+    "spoken-english",
+    "ielts",
+    "tofel",
+    "oet",
+    "english-grammar",
+    "voice-n-accent"
+  ],
+  "author": "ainul-haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ainul-haque/CIEFAL/issues"
+  },
+  "homepage": "https://github.com/ainul-haque/CIEFAL#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
