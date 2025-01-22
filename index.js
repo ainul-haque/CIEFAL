@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import ejsMate from "ejs-mate";
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,6 +26,11 @@ app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
 });
 
+// 404 route
+app.use((req, res) => {
+  res.status(404).render("404", { title: "404 - Not Found" });
+});
+
 app.listen(PORT, () => {
-  console.log(`CIEFAL website running on localhost:${PORT}`);
+  console.log(`CIEFAL website running on port ${PORT}`);
 });

@@ -5,7 +5,9 @@
   "description": "The official webiste of CIEFAL - Cambridge Institute of English For Advanced Learning",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "build": "npm install",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
