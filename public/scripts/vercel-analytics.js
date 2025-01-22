@@ -1,5 +1,5 @@
-import { inject } from "https://cdn.vercel-insights.com/v1/script.js";
-import { injectSpeedInsights } from "https://cdn.vercel-insights.com/v1/speed-insights.js";
+import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 inject();
 injectSpeedInsights();
