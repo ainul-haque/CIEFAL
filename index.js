@@ -17,23 +17,34 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
+  res.render("index", { title: "Home", curYear: new Date().getFullYear() });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About" });
+  res.render("about", { title: "About", curYear: new Date().getFullYear() });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", { title: "Contact" });
+  res.render("contact", {
+    title: "Contact",
+    curYear: new Date().getFullYear(),
+  });
 });
 
 app.get("/courses", (req, res) => {
-  res.render("courses", { title: "Courses" });
+  res.render("courses", {
+    title: "Courses",
+    curYear: new Date().getFullYear(),
+  });
 });
 
 app.use((req, res) => {
-  res.status(404).render("404", { title: "404 - Not Found" });
+  res
+    .status(404)
+    .render("404", {
+      title: "404 - Not Found",
+      curYear: new Date().getFullYear(),
+    });
 });
 
 app.listen(port, () => {
